@@ -14,34 +14,51 @@ FILES_TO_LOAD = [
 ]
 
 
+
 def load_calibration_file(file_path):
-    """Read calibration entries and parse colon-separated numeric values."""
     parameters = {}
 
     with file_path.open("r", encoding="utf-8-sig") as file:
-        for line in file:
-            line = line.strip()
+        content = file.read().strip()
 
-            if not line or line.startswith("#") or ":" not in line:
-                continue
+    if not content:
+        raise ValueError(f"Calibration file is empty: {file_path}")
 
-            key, value = line.split(":", 1)
-            values = value.split()
+    # Format 1: plain numeric values, such as calib_cam_to_velo.txt
+    if ":" not in content:
+        values = np.fromstring(content.replace("\n", " "), sep=" ")
 
-            try:
-                numbers = np.array(
-                    [float(item) for item in values],
-                    dtype=np.float64,
-                )
-            except ValueError:
-                # Ignore non-numeric entries in this basic loader.
-                continue
+        if values.size == 12:
+            parameters["transform_matrix"] = values.reshape(3, 4)
+        else:
+            raise ValueError(
+                f"Expected 12 values for a 3x4 transformation matrix, "
+                f"but found {values.size} in {file_path.name}"
+            )
 
-            if numbers.size:
-                parameters[key.strip()] = numbers
+        return parameters
+
+    # Format 2: named parameters, such as perspective.txt
+    for line in content.splitlines():
+        line = line.strip()
+
+        if not line or line.startswith("#") or ":" not in line:
+            continue
+
+        key, value = line.split(":", 1)
+
+        try:
+            values = np.array(
+                [float(item) for item in value.split()],
+                dtype=np.float64
+            )
+        except ValueError:
+            continue
+
+        if values.size:
+            parameters[key.strip()] = values
 
     return parameters
-
 
 def describe_parameter(key, values):
     """Display values and recognize common matrix sizes."""
