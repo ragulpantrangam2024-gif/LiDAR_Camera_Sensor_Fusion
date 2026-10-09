@@ -1,0 +1,75 @@
+Stage 2 — LiDAR-to-Camera Projection
+
+Task 1: Verify Projection Setup
+
+Objective: Verify the camera image, LiDAR point cloud, and calibration parameters before projecting LiDAR points onto the image.
+
+Implementation:
+
+Loaded camera image and Velodyne LiDAR data for frame 0000000100.
+
+Read the camera-to-Velodyne transformation matrix and inverted it to transform LiDAR points into camera coordinates.
+
+Applied camera rectification and the projection matrix from perspective.txt.
+
+Calculated projected pixel coordinates and filtered points outside the image boundaries.
+
+Results:
+
+Image resolution: 1408 × 376
+
+Valid LiDAR points: 109,355
+
+Points in front of the camera: 56,300
+
+Points inside image bounds: 26,599
+
+Outcome: Confirmed that the projection pipeline produces valid image coordinates. Calibration direction and coordinate conventions still require verification.
+
+Task 2: Project LiDAR Points onto the Camera Image
+
+Objective: Visualize the projected LiDAR points over the camera image to inspect spatial alignment.
+
+Implementation:
+
+Transformed LiDAR points into camera coordinates.
+
+Applied rectification and the camera projection matrix.
+
+Filtered points that were behind the camera or outside image boundaries.
+
+Overlaid the projected points on the camera image.
+
+Used depth-based colors to distinguish near and far points.
+
+Output:
+
+results/0000000100_lidar_overlay.png
+
+Results:
+
+Frame: 0000000100
+
+Valid projected points: 26,599
+
+Visualized the LiDAR distribution across the road, vehicles, and surrounding scene.
+
+Outcome: Generated a LiDAR–camera overlay for visual inspection. The alignment appears plausible, but exact calibration accuracy has not yet been established.
+
+Dependencies
+
+Python
+
+NumPy
+
+OpenCV
+
+Matplotlib
+
+Next Steps
+
+Verify calibration direction and coordinate conventions.
+
+Investigate projection alignment and reduce visual clutter.
+
+Continue with subsequent sensor-fusion tasks after validating the projection.
