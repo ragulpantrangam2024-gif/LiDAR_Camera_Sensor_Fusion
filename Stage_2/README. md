@@ -1,75 +1,31 @@
-Stage 2 — LiDAR-to-Camera Projection
+# Stage 2 – LiDAR-to-Camera Projection
 
-Task 1: Verify Projection Setup
+## Overview
+Project LiDAR point clouds onto camera images using KITTI-360 calibration data and validate the available 3D ground-truth annotations.
 
-Objective: Verify the camera image, LiDAR point cloud, and calibration parameters before projecting LiDAR points onto the image.
+## Tasks Completed
+1. **Verify Projection Setup** – Load the image, LiDAR points, and calibration matrices.
+2. **Project LiDAR onto Image** – Transform and project LiDAR points onto the camera image.
+3. **Improve Overlay** – Reduce displayed points for clearer visualization.
+4. **Validate Box Coordinates** – Inspect ground-truth annotations and coordinate ranges.
+5. **Project Ground-Truth Box** – Test projection of a selected 3D bounding box.
+6. **[Reserved / see script]**
+7. **[Reserved / see script]**
+8. **[Reserved / see script]**
+9. **Selected Box Validation** – Check selected boxes for positive depth and image-boundary validity.
+10. **LiDAR and Box Comparison** – Visualize projected LiDAR points alongside selected ground-truth boxes.
 
-Implementation:
+## Results
+- Projected LiDAR overlay images
+- Clean LiDAR visualization
+- Ground-truth coordinate diagnostics
+- Selected bounding-box validation
+- LiDAR and bounding-box comparison image
 
-Loaded camera image and Velodyne LiDAR data for frame 0000000100.
+## Tools
+Python, OpenCV, NumPy, Matplotlib, KITTI-360 dataset
 
-Read the camera-to-Velodyne transformation matrix and inverted it to transform LiDAR points into camera coordinates.
+## Output Directory
+`Stage_2/results/`
 
-Applied camera rectification and the projection matrix from perspective.txt.
-
-Calculated projected pixel coordinates and filtered points outside the image boundaries.
-
-Results:
-
-Image resolution: 1408 × 376
-
-Valid LiDAR points: 109,355
-
-Points in front of the camera: 56,300
-
-Points inside image bounds: 26,599
-
-Outcome: Confirmed that the projection pipeline produces valid image coordinates. Calibration direction and coordinate conventions still require verification.
-
-Task 2: Project LiDAR Points onto the Camera Image
-
-Objective: Visualize the projected LiDAR points over the camera image to inspect spatial alignment.
-
-Implementation:
-
-Transformed LiDAR points into camera coordinates.
-
-Applied rectification and the camera projection matrix.
-
-Filtered points that were behind the camera or outside image boundaries.
-
-Overlaid the projected points on the camera image.
-
-Used depth-based colors to distinguish near and far points.
-
-Output:
-
-results/0000000100_lidar_overlay.png
-
-Results:
-
-Frame: 0000000100
-
-Valid projected points: 26,599
-
-Visualized the LiDAR distribution across the road, vehicles, and surrounding scene.
-
-Outcome: Generated a LiDAR–camera overlay for visual inspection. The alignment appears plausible, but exact calibration accuracy has not yet been established.
-
-Dependencies
-
-Python
-
-NumPy
-
-OpenCV
-
-Matplotlib
-
-Next Steps
-
-Verify calibration direction and coordinate conventions.
-
-Investigate projection alignment and reduce visual clutter.
-
-Continue with subsequent sensor-fusion tasks after validating the projection.
+**Note:** Some vehicles have missing ground-truth annotations, occlusion, or limited LiDAR visibility. These cases are documented limitations and are not forced into evaluation.
