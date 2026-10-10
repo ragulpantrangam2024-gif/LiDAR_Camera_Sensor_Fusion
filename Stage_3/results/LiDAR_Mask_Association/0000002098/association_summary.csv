@@ -1,0 +1,15 @@
+frame,car_id,mask_file,mask_pixels,associated_lidar_points,cloud_file
+0000002098,1,car_01.png,12889,1692,car_01_points.npy
+0000002098,2,car_02.png,6910,1173,car_02_points.npy
+0000002098,3,car_03.png,3711,710,car_03_points.npy
+0000002098,4,car_04.png,3846,640,car_04_points.npy
+0000002098,5,car_05.png,4930,162,car_05_points.npy
+0000002098,6,car_06.png,2124,186,car_06_points.npy
+0000002098,7,car_07.png,8820,364,car_07_points.npy
+0000002098,8,car_08.png,1931,293,car_08_points.npy
+0000002098,9,car_09.png,1147,91,car_09_points.npy
+0000002098,10,car_10.png,1111,92,car_10_points.npy
+0000002098,11,car_11.png,1217,15,car_11_points.npy
+0000002098,12,car_12.png,805,32,car_12_points.npy
+0000002098,13,car_13.png,635,38,car_13_points.npy
+0000002098,14,car_14.png,690,40,car_14_points.npy

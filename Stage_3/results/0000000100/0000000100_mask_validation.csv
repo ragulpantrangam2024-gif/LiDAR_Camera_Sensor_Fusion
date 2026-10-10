@@ -1,0 +1,8 @@
+mask_file,width,height,dimensions_match,binary_values_only,foreground_pixels,valid
+car_01.png,1408,376,True,True,39390,True
+car_02.png,1408,376,True,True,5713,True
+car_03.png,1408,376,True,True,3648,True
+car_04.png,1408,376,True,True,4001,True
+car_05.png,1408,376,True,True,1479,True
+car_06.png,1408,376,True,True,805,True
+car_07.png,1408,376,True,True,548,True

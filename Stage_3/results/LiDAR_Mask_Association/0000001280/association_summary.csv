@@ -1,0 +1,3 @@
+frame,car_id,mask_file,mask_pixels,associated_lidar_points,cloud_file
+0000001280,1,car_01.png,7058,990,car_01_points.npy
+0000001280,2,car_02.png,2353,224,car_02_points.npy

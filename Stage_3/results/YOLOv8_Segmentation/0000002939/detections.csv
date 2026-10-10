@@ -1,0 +1,2 @@
+frame,car_id,class_id,confidence,x1,y1,x2,y2,mask_pixels,mask_file
+0000002939,1,2,0.9157,0,185,286,281,19434,car_01.png

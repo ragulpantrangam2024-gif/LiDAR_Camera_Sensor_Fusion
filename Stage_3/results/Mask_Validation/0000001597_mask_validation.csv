@@ -1,0 +1,5 @@
+frame,car_id,mask_file,width,height,binary_values_only,foreground_pixels
+0000001597,1,car_01.png,1408,376,True,5689
+0000001597,2,car_02.png,1408,376,True,1321
+0000001597,3,car_03.png,1408,376,True,3195
+0000001597,4,car_04.png,1408,376,True,486
