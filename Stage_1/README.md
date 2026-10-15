@@ -38,3 +38,4 @@ Status: Implemented; verify by running the script.
 - `results/0000000100_ground_truth_summary.csv`
 
 **Outcome:** Ground-truth annotations are prepared for later LiDAR point-in-box testing and 3D detection evaluation.
+
