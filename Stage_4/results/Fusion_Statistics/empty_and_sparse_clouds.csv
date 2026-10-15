@@ -1,0 +1,7 @@
+﻿frame_id,car_id,point_count,cloud_status,file
+0000000100,06,14,sparse,Stage_3\results\LiDAR_Mask_Association\0000000100\car_point_clouds\car_06_points.npy
+0000000570,,0,no_car_clouds,
+0000001461,08,14,sparse,Stage_3\results\LiDAR_Mask_Association\0000001461\car_point_clouds\car_08_points.npy
+0000001791,03,17,sparse,Stage_3\results\LiDAR_Mask_Association\0000001791\car_point_clouds\car_03_points.npy
+0000002098,11,15,sparse,Stage_3\results\LiDAR_Mask_Association\0000002098\car_point_clouds\car_11_points.npy
+0000002449,11,19,sparse,Stage_3\results\LiDAR_Mask_Association\0000002449\car_point_clouds\car_11_points.npy

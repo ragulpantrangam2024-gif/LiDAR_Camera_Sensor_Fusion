@@ -40,6 +40,14 @@ Output
 
 Results are saved under Stage_4/results/, including bird’s-eye-view screenshots.
 
+Task 5: Fusion Statistics and Export
+
+Calculates per-frame and per-car point-cloud statistics, identifies empty or sparse clouds, and exports the results as CSV files.
+
 Note: Automatically saved views provide a consistent overview, but some frames may require manual rotation, zooming, and panning for better interpretation. Use the interactive viewer to inspect these frames and save a clearer screenshot with S.
 
 Some frames may contain few or no associated car LiDAR points, or may have incomplete ground-truth annotations. These cases should be interpreted accordingly.
+
+Summary
+
+Stage 4 provides visual and quantitative evaluation of the LiDAR–camera fusion pipeline across 20 selected frames. The generated visualizations and CSV reports help assess point-cloud association quality and identify sparse or missing car-level point clouds.
