@@ -51,6 +51,7 @@ def read_image(path):
     return image
 
 
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

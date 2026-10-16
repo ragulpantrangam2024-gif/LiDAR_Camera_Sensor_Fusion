@@ -1,0 +1,7 @@
+frame_id,car_cloud,ground_truth_file,input_points,finite_points,sparse_cloud,valid_boxes,best_gt_index,points_inside,points_outside,inside_ratio_percent,center_distance_m,geometry_error_m,status,selection
+2098,car_05_points.npy,BBoxes_2098.json,162,162,False,186,2920,149,13,91.975,1.944,0.0,OK,high_overlap
+2098,car_07_points.npy,BBoxes_2098.json,364,364,False,186,2922,314,50,86.264,1.798,0.0,OK,high_overlap
+1461,car_01_points.npy,BBoxes_1461.json,479,479,False,21,1401,409,70,85.386,1.048,0.0,OK,high_overlap
+100,car_06_points.npy,BBoxes_100.json,14,14,True,31,208,0,14,0.0,13.083,0.0,SPARSE_CLOUD,low_overlap
+360,car_01_points.npy,BBoxes_360.json,122,122,False,31,287,0,122,0.0,16.442,0.0,OK,low_overlap
+360,car_04_points.npy,BBoxes_360.json,25,25,False,31,287,0,25,0.0,33.799,0.0,OK,low_overlap
