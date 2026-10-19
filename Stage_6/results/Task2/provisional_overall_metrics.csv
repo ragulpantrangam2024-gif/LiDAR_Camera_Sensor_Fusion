@@ -1,0 +1,10 @@
+metric,value,interpretation
+predicted_clouds,82.0,Number of predicted cloud records
+provisional_matches,59.0,One-to-one geometric matches at 30% threshold
+unmatched_predictions,23.0,Predicted clouds not matched at this threshold
+ground_truth_annotation_records,1009.0,All records in annotation JSON files
+matched_ground_truth_records,59.0,Unique GT records selected by provisional matches
+unmatched_ground_truth_records,950.0,Unmatched annotation records; not confirmed false negatives
+association_precision_proxy_percent,71.95121951219512,Matches / predicted clouds; provisional geometric proxy
+annotation_coverage_proxy_percent,5.847373637264618,Matched GT records / all annotation records; not validated recall
+exploratory_f1_proxy_percent,10.81576535288726,Exploratory combination only; not validated detection F1

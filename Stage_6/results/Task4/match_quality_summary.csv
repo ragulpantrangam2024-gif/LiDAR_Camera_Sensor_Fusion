@@ -1,0 +1,5 @@
+review_category,matches,mean_points,mean_containment_percent,median_containment_percent,mean_center_distance_m
+Large center distance,1,29.0,44.828,44.828,19.009
+Low containment,4,96.5,32.6685,32.5145,1.6735
+No threshold triggered,51,730.2156862745098,65.54345098039215,65.591,1.0990392156862745
+Small cloud,3,31.333333333333332,54.75466666666667,56.522,1.8973333333333333

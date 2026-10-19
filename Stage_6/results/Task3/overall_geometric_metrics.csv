@@ -1,0 +1,5 @@
+metric,count,mean,median,std,min,max,description
+inside_ratio_percent,59,62.41494915254238,64.04,13.724906852800844,31.579,91.975,Point containment ratio of each matched cloud
+outside_ratio_percent,59,37.58506131269581,35.95959595959596,13.724859890147087,8.024691358024691,68.42105263157895,Fraction of each matched cloud outside its selected box
+center_distance_m,59,1.4821355932203393,1.269,2.3746242785030454,0.272,19.009,Distance statistic inherited from the candidate evaluation; not point-to-box distance
+geometry_error_m,59,0.0,0.0,0.0,0.0,0.0,"Existing Stage 5 geometry diagnostic, if available"

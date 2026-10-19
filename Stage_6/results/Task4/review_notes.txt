@@ -1,0 +1,40 @@
+STAGE 6 - TASK 4: MATCH QUALITY AUDIT
+=====================================
+
+Input:
+D:\rwu\rwu jobs\Computer_Vision_Projects\Lidar_Camera_Fusion\Stage_6\results\Task3\per_match_geometric_metrics.csv
+
+Output:
+D:\rwu\rwu jobs\Computer_Vision_Projects\Lidar_Camera_Fusion\Stage_6\results\Task4
+
+Total provisional matches: 59
+Matches flagged for review: 8
+Matches without triggered thresholds: 51
+Matches with multiple flags: 3
+
+Review thresholds:
+- Small cloud: fewer than 50 finite points
+- Low containment: inside ratio below 40.0%
+- Large center distance: center_distance_m above 10.0 m
+
+Flag counts (categories can overlap):
+- Small clouds: 6
+- Low containment: 4
+- Large center distance: 1
+
+Interpretation:
+These are screening thresholds for prioritizing manual review.
+A flagged match is not necessarily incorrect, and an unflagged
+match is not necessarily correct.
+
+The containment ratio measures the percentage of points assigned
+to a cloud that lie inside its selected ground-truth box.
+
+center_distance_m is the distance statistic supplied by the
+existing evaluation pipeline. It must not be described as
+point-to-box-surface distance.
+
+Ground-truth annotations do not contain class labels, and the
+box geometry and matching assumptions have not been fully
+validated. Therefore, this audit does not establish detection
+precision, recall, F1, or 3D IoU.
